@@ -1,24 +1,26 @@
 #ifndef BOOK_H
 #define BOOK_H
-class person {
-
+#include<iostream>
+using namespace std;
+class Book {
+private:
+    int id;
+    string title;
+    string author;
+    int price;
+    int quatity;
+    string publisher;
+    int publishingYear;
+    int bookShelve;
+    string language;
+public:
+    Book();
+    ~Book();
+    Book createBook();
+    Book update();
+    Book Erase();
+    void search();
+    void display();
+    
 };
-
-class employee:public person {
-
-};
-
-class customer:public person {
-
-};
-
-class book {
-
-};
-
-class order {
-
-};
-
-
 #endif
