@@ -15,5 +15,6 @@ class Person {
         Person Add(const Person& other);
         Person Display();
         void Search();
-}
+    }
 #endif
+

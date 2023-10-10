@@ -16,11 +16,11 @@ private:
 public:
     Book();
     ~Book();
-    Book createBook();
+    friend istream &operator >> (istream &in, Book &b);
+    friend ostream &operator << (ostream &os, const Book &b);
     Book update();
-    Book Erase();
+    Book erase();
     void search();
-    void display();
-    
+
 };
 #endif
