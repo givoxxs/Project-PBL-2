@@ -5,16 +5,21 @@
 using namespace std;
 
 class Person {
-    int id;
-    string name, phoneNumber;
-
+    protected:
+        int Id;
+        string name, phoneNumber;
     public: 
         Person();
+        Person(int ID, string name, string phoneNumber);
         ~Person();
 
+        void setID(int id);
+        void setName(const string& name);
+        void setPhoneNumber(const string& phoneNumber);
+
         Person Add(const Person& other);
-        Person Display();
-        void Search();
-    }
+        void Display();
+        Person Search(const string& query);
+ }
 #endif
 
