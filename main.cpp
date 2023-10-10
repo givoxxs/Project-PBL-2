@@ -1,6 +1,8 @@
+#include "Person.h"
 #include <iostream>
 
 using namespace std;
+Person personList[100];
 
 int main()
 {
