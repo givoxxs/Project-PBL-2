@@ -2,18 +2,30 @@
 #ifndef PERSON_H
 #define PERSON_H
 #include <iostream>
+#include <string>
+#include <vector>
 using namespace std;
 
 class Person {
-    int id;
-    string name, phoneNumber;
-
+    protected:
+        int Id;
+        string name, phoneNumber;
+        static vector<Person*> personList;
     public: 
-        Person();
-        ~Person();
+        Person(int Id,string name, string phoneNumber);
+        virtual ~Person();
 
-        Person Add(const Person& other);
-        Person Display();
-        void Search();
+        int getId() const;
+        string getName() const;
+        string getPhoneNumber() const;
+
+        virtual void Display() const;
+        virtual void Search(std::string keyword) const;
+
+        static void Add(Person* person);
+        static void DisplayAll();
+        static Person* FindByID(int id);
+        static void SearchByName(std::string name);      
 };
 #endif
+
