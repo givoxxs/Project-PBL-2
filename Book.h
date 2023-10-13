@@ -13,9 +13,13 @@ private:
     int quantity;
     string publisher;
     int publishingYear;
-    int bookShelve;
     string language;
+    int bookShelve;
 public:
+    Book(int id, string title, string author, 
+    string genre, int price, int quantity, string publisher, 
+    int publishingYear, string language, int bookShelve);
+    ~Book();
     Book add();
     void display();
     Book &erase(int a);

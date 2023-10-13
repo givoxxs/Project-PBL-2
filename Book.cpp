@@ -3,7 +3,8 @@
 #include <string.h>
 #include<vector>
 using namespace std;
-
+Book(int id, string title, string author, string genre, int price, int quantity, 
+string publisher, int publishingYear, string language, int bookShelve):id(id),title(title),
 Book Book::add()
 {
   cout << "Nhap vao thong tin cua sach: " << endl;
@@ -36,10 +37,16 @@ Book Book::add()
 void Book::display()
 {
   cout << "Thong tin cua sach la: " << endl;
-  cout << "ID: " << id << "    Tieu de: " << title << endl;
-  cout << "Tac gia: " << author << "The loai: " << genre << "   Gia: " << price << "    So luong: " << quantity << endl;
-  cout << "Nha xuat ban: " << publisher << " Nam xuat ban: " << publishingYear << endl;
-  cout << "Ke sach: " << bookShelve << "   Ngon ngu: " << language << endl;
+  cout << "ID: "<<id<<endl;
+  cout <<"Tieu de: "<<title<<endl;
+  cout<<"Tac gia: "<<author<<endl;
+  cout<<"The loai: "<<genre<<endl;
+  cout<<"Gia: "<<price<<endl;
+  cout<<"So luong: "<<quantity<<endl;
+  cout<<"Nha xuat bang: "<<publisher<<endl;
+  cout<<"Nam xuat bang: "<<publishingYear<<endl;
+  cout<<"Ngon ngu: "<<language<<endl;
+  cout<<"Ke sach: "<<bookShelve<<endl;
 }
 
 Book &Book::erase(int a)
@@ -53,3 +60,5 @@ void Book::search_id(int idd) {
       display();
   }
 }
+
+
