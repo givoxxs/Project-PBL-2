@@ -1,11 +1,4 @@
 {
-<<<<<<< HEAD
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": []
-=======
     "configurations": [
         {
             "name": "C/C++: gcc.exe build and debug active file",
@@ -61,5 +54,4 @@
         }
     ],
     "version": "2.0.0"
->>>>>>> 5f1105606b3f3e204f6f8c9a1ae4df04a86eca9c
 }

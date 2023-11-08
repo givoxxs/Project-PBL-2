@@ -1,65 +1,35 @@
+#include <bits/stdc++.h>
 #include "Person.h"
-#include <iostream>
-using namespace std;
+#include "Day.h"
 
-vector<Person*> Person::personList;
-//Hàm dựng
-Person::Person(int Id, string name, string phoneNumber)
-    : Id(Id), name(name), phoneNumber(phoneNumber) {
-    Add(this);
-}
-//Hàm hủy
-Person::~Person() {}
-// Get ID
-int Person::getId() const {
-    return Id;
-}
-// Get Name
-string Person::getName() const {
-    return name;
-}
-// Get Phone Number
-string Person::getPhoneNumber() const {
-    return phoneNumber;
-}
-// Display Person
-void Person::Display() const {
-    cout << "Id: " << Id << endl;
-    cout << "Name: " << name << endl;
-    cout << "Phone Number: " << phoneNumber << endl;
-}
-// Search follow keyword
-void Person::Search(string keyword) const {
-    if (name.find(keyword) != string::npos || phoneNumber.find(keyword) != string::npos) {
-        Display();
-    }
+Person::Person(const Person &P) {
+    this->Name = P.Name;
+    this->PhoneNumber = P.PhoneNumber;
+    this->Year_of_birthday = P.Year_of_birthday;
 }
 
-void Person::Add(Person* person) {
-    personList.push_back(person);
+// virtual Person::~Person() {}
+
+void Person::setName(std::string name) {
+    this->Name = name;
 }
 
-void Person::DisplayAll() {
-    for (const auto& person : personList) {
-        person->Display();
-        cout << "-------------------------" << endl;
-    }
+std::string Person::getName() const {
+    return Name;
 }
 
-Person* Person::FindByID(int id) {
-    for (const auto& person : personList) {
-        if (person->getId() == id) {
-            return person;
-        }
-    }
-    return nullptr;
+void Person::setPhoneNumber(std::string PhoneNumber) {
+    this->PhoneNumber = PhoneNumber;
 }
 
-void Person::SearchByName(string name) {
-    for (const auto& person : personList) {
-        if (person->getName() == name) {
-            person->Display();
-            cout << "-------------------------" << endl;
-        }
-    }
+std::string Person::getPhoneNumber() const {
+    return PhoneNumber;
+}
+
+void Person::setYear_of_birthday(int Year_of_birthday) {
+    this->Year_of_birthday = Year_of_birthday;
+}
+
+int Person::getYear_of_birthday() const {
+    return Year_of_birthday;
 }
